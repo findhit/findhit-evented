@@ -12,7 +12,7 @@ all: test
 test: test-mocha
 
 test-mocha:
-TESTS := $(shell find $(PATH_TEST)/* -name "*.test.js")
+	$(eval TESTS := $(shell find $(PATH_TEST)/* -name "*.test.js"))
 
 	@echo "Running tests..."
 	@mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS);
