@@ -1,0 +1,55 @@
+{
+  "name": "findhit-evented",
+  "description": "javascript evented built on top of findhit-class",
+  "version": "0.0.1",
+  "author": "José Moreira <jose.moreira@findhit.com>",
+  "contributors": [
+    {
+      "name": "José Moreira",
+      "email": "jose.moreira@findhit.com"
+    },
+    {
+      "name": "Bruno Casanova",
+      "email": "bruno.casanova@findhit.com"
+    },
+    {
+      "name": "Gabriel Conceição",
+      "email": "gabriel.conceicao@findhit.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/findhit/findhit-evented.git"
+  },
+  "bugs": {
+    "url": "https://github.com/findhit/findhit-evented/issues"
+  },
+  "dependencies": {
+    "findhit-class": "0.0.1",
+    "findhit-process": "^0.0.1",
+    "findhit-promise": "0.0.2",
+    "findhit-util": "0.0.7"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.3",
+    "sinon": "^1.10.3"
+  },
+  "keywords": [
+    "evented",
+    "event",
+    "eventual",
+    "emitter",
+    "extendable",
+    "extend",
+    "nodejs"
+  ],
+  "main": "index",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find tests/* -name '*.test.js')"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "license": "GPL v3"
+}
