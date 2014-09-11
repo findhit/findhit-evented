@@ -25,10 +25,10 @@
     "url": "https://github.com/findhit/findhit-evented/issues"
   },
   "dependencies": {
-    "findhit-class": "0.0.1",
+    "findhit-class": "^0.0.2",
     "findhit-process": "^0.0.1",
-    "findhit-promise": "0.0.2",
-    "findhit-util": "0.0.7"
+    "findhit-promise": "^0.0.2",
+    "findhit-util": "^0.0.8"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -46,7 +46,7 @@
   ],
   "main": "index",
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find tests/* -name '*.test.js')"
+    "test": "node node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')"
   },
   "engines": {
     "node": ">=0.8"
