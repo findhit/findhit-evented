@@ -1,7 +1,6 @@
-findhit-event-emitter
-=====================
+# Evented ![test-badge](http://strider.findhit.com/findhit/findhit-evented/badge)
 
-javascript chained event emitter based on findhit-promise
+javascript chained event emitter based on findhit-class
 
 Instalation
 -----------
