@@ -64,6 +64,30 @@ describe( "Evented", function () {
 			expect( times ).to.be.equal( 3 );
 		});
 
+		describe( "from $on prop", function () {
+			
+			it( "run 3 times same events", function () {
+				var EventedProps = Evented.extend({
+					$on: {
+						test: function () {
+							times ++;
+						}
+					},
+				});
+
+				this.evt = new EventedProps();
+
+				var times = 0;
+
+				this.evt.fire( 'test' );
+				this.evt.fire( 'test' );
+				this.evt.fire( 'test' );
+
+				expect( times ).to.be.equal( 3 );
+			});
+
+		});
+
 	});
 
 	describe( ".once", function () {
@@ -82,6 +106,30 @@ describe( "Evented", function () {
 			this.evt.fire( 'test' );
 
 			expect( times ).to.be.equal( 1 );
+		});
+
+		describe( "from $once prop", function () {
+			
+			it( "run 1 time an event that is fired multiple times", function () {
+				var EventedProps = Evented.extend({
+					$once: {
+						test: function () {
+							times ++;
+						}
+					},
+				});
+
+				this.evt = new EventedProps();
+
+				var times = 0;
+
+				this.evt.fire( 'test' );
+				this.evt.fire( 'test' );
+				this.evt.fire( 'test' );
+
+				expect( times ).to.be.equal( 1 );
+			});
+
 		});
 
 	});

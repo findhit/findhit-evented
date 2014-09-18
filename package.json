@@ -1,7 +1,7 @@
 {
   "name": "findhit-evented",
   "description": "javascript evented built on top of findhit-class",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "José Moreira <jose.moreira@findhit.com>",
   "contributors": [
     {
@@ -28,7 +28,7 @@
     "findhit-class": "^0.0.2",
     "findhit-process": "^0.0.1",
     "findhit-promise": "^0.0.2",
-    "findhit-util": "^0.0.8"
+    "findhit-util": "^0.2.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",
